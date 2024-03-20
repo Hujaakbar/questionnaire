@@ -67,7 +67,7 @@ main {
         & button {
             flex-grow: 1;
             min-width: 5rem;
-            padding: 0.7rem;
+            padding: 0.8rem;
             border-radius: 0.7rem;
             color: white;
             outline: none;
