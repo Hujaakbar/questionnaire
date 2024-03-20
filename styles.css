@@ -1,0 +1,88 @@
+html * {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100dvh;
+    width: 100dvw;
+    box-sizing: border-box;
+    display: flex;
+    background-color: rgb(110, 175, 195);
+    /* background-color: rgb(231, 146, 146); */
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    /* gap: 1.5rem; */
+    font-size: 110%;
+
+    & div.question {
+        grid-column: 1/-1;
+        grid-row: 2/5;
+        width: 85dvw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        min-height: 50%;
+        /* height: 65dvh; */
+        padding: 1.2rem 0.5rem;
+        /* background-color: rgb(81, 164, 189); */
+        background-color: rgb(231, 146, 146);
+        text-wrap: pretty;
+        font-weight: bolder;
+        text-decoration: solid;
+        border-radius: 0.8rem;
+        --outline-color: rgb(20, 58, 90);
+        box-shadow: rgb(255, 255, 255) 0px 0px 15px;
+        & p {
+            text-shadow: 1px 1px 0 var(--outline-color),
+                -1px 1px 0 var(--outline-color),
+                -1px -1px 0 var(--outline-color),
+                1px -1px 0 var(--outline-color);
+            color: rgb(57, 187, 31);
+            /* color: rgb(33, 182, 199); */
+            font-size: 40px;
+            text-align: center;
+            text-wrap: pretty;
+            /* -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black; */
+        }
+    }
+
+    & div.buttons {
+        padding: 0.5rem;
+        grid-row: 5/-1;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: red; */
+        gap: 1rem;
+        & button {
+            flex-grow: 1;
+            min-width: 5rem;
+            padding: 0.7rem;
+            border-radius: 0.7rem;
+            color: white;
+            outline: none;
+            box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 15px;
+            border: 1px solid rgb(153, 153, 153);
+
+            &.yes {
+                font-size: 100.2%;
+                background-color: green;
+                box-shadow: rgba(255, 255, 255, 0.936) 3px 3px 15px;
+            }
+
+            &.no {
+                background-color: gray;
+            }
+        }
+    }
+}
